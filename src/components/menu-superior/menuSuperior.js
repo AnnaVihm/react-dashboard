@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
-
-class MenuSuperior extends Component{
-    render(){
-
-
-        return(
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
-                 <a class="navbar-brand" href="#">Dashboard</a>
- 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+import {Link} from "react-router-dom" 
+class MenuSuperior extends Component {
+    render() {
+        return (
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
+                <Link className="navbar-brand" to="/">Dashboard</Link>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <div className="collapse navbar-collapse" id="navbarText">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/">Resumo <span className="sr-only">(current)</span></Link>
+                        </li>
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/consultas">Consultas <span className="sr-only">(current)</span></Link>
+                        </li>
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/faturamento">Faturamento <span className="sr-only">(current)</span></Link>
                         </li>
                     </ul>
                 </div>
